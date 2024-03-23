@@ -37,11 +37,11 @@ public class Container
     
     public override string ToString()
     {
-        return "Masa ładunku : " + weight
+        return "Numer Seryjny : " + serialNumber
                                  + "\nWysokość kontenera : " + height
                                  + "\nMasa własna konterera : " + containerWeight
                                  + "\nGłębokość : " + depth
-                                 + "\nNumer Seryjny : " + serialNumber
+                                 + "\nMasa ładunku: " + weight
                                  + "\nMaksymalna akceptowalna waga : " + maxAcceptableWeight;
 
     }
