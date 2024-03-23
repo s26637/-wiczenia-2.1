@@ -1,14 +1,29 @@
 ﻿using Zadanie2._1;
 
-Container container = new Container(5000, 200, 1000, 500, "C", 4000);
+// Container container = new Container(5000, 200, 1000, 500, 4000);
+//
+// Console.WriteLine(container.ToString());
+//
+// container.unloadingContainer();
+//
+// Console.WriteLine(container.ToString());
+//
+// container.loadingContainer(4000);
+//
+// Console.WriteLine(container.ToString());
 
-Console.WriteLine(container.ToString());
 
-container.unloadingContainer();
+Console.WriteLine("\n####################################\n");
 
-Console.WriteLine(container.ToString());
+LiquidContainer liquidContainer = new LiquidContainer(3000, 200, 1000, 500, 4000, true);
 
-container.loadingContainer(5000);
+liquidContainer.unloadingContainer();
 
-Console.WriteLine(container.ToString());
+Console.WriteLine(liquidContainer.ToString());
+
+liquidContainer.loadingContainer(1900);
+
+Console.WriteLine(liquidContainer.ToString());
+
+
 

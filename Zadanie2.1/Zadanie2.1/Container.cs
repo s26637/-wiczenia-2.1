@@ -3,19 +3,19 @@
 public class Container
 
 {
-    public static int number = 1;
-        
-    
-    public double weight { get; set; }
-    public double height { get; set; }
-    public double containerWeight { get; set; }
-    public double depth { get; set; }
-    public string serialNumber { get; private set; }
-    public double maxAcceptableWeight { get; set; }
+    public static int number = 0;
+
+
+    public double weight;
+    public double height;
+    public double containerWeight;
+    public double depth;
+    public string serialNumber;
+    public double maxAcceptableWeight;
 
 
 
-    public Container(double weight, double height, double containerWeight, double depth, string type,
+    public Container(double weight, double height, double containerWeight, double depth,
         double maxAcceptableWeight)
     {
 
@@ -23,13 +23,18 @@ public class Container
         this.height = height;
         this.containerWeight = containerWeight;
         this.depth = depth;
-        this.serialNumber = "KON-" + type + "-" + number;
-        number += 1;
+        this.serialNumber = makeSerialNumber();
         this.maxAcceptableWeight = maxAcceptableWeight;
         
     }
 
 
+    public string makeSerialNumber()
+    {   
+        number += 1;
+        return "KON-C-" + number;
+    }
+    
     public override string ToString()
     {
         return "Masa ładunku : " + weight
@@ -47,7 +52,7 @@ public class Container
         this.weight = 0;
     }
 
-    public void loadingContainer(double weight)
+    public virtual void loadingContainer(double weight)
     {
         if (weight > this.maxAcceptableWeight)
         {
