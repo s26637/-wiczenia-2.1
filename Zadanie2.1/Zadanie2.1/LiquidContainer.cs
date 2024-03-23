@@ -10,6 +10,18 @@ public class LiquidContainer : Container, IHazardNotifier
     }
 
 
+    public override string ToString()
+    {
+        if (isDangerCargoType)
+        {
+            return base.ToString() + "\niebezpieczna zawartość";
+        }
+        else
+        {
+            return base.ToString() + "\nbezpieczna zawartość";
+        }
+    }
+
     public override void loadingContainer(double weight)
     {
         if (isDangerCargoType)

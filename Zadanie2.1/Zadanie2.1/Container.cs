@@ -47,7 +47,7 @@ public class Container
     }
 
 
-    public void unloadingContainer()
+    public virtual void unloadingContainer()
     {
         this.weight = 0;
     }
